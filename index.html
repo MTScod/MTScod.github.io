@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painéis de inteligência comercial · demonstração</title>
+<meta name="description" content="Importação, mercado e compras em painéis interativos. Demonstração com dados 100% fictícios.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mtscod.github.io/">
+<meta property="og:site_name" content="Painéis Lumora">
+<meta property="og:title" content="Painéis de inteligência comercial · demonstração">
+<meta property="og:description" content="Importação, mercado e compras em painéis interativos. Demonstração com dados 100% fictícios.">
+<meta property="og:image" content="https://mtscod.github.io/previa.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Painéis de inteligência comercial: importação, mercado e compras">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--bg1:#071636;--bg2:#13285e;--fg:#fff;--sub:#cbd5e1;--mut:#94a3b8;--azul:#60a5fa;--btn:#2563eb}
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--fg);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+  main{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:48px 24px;max-width:880px;margin:0 auto}
+  small{color:var(--azul);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px}
+  h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:14px 0 18px}
+  .barra{width:140px;height:6px;border-radius:3px;background:var(--btn);margin-bottom:22px}
+  p{color:var(--sub);font-size:clamp(17px,2.4vw,21px);line-height:1.5;margin:0 0 32px;max-width:640px}
+  .acoes{display:flex;flex-wrap:wrap;gap:14px}
+  a.b{display:inline-block;padding:14px 24px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;color:#fff;background:var(--btn)}
+  a.b.sec{background:rgba(255,255,255,.1);border:1px solid rgba(147,197,253,.5)}
+  .nota{margin-top:40px;color:var(--mut);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <small>Painéis de inteligência comercial</small>
+  <h1>Importação, mercado e compras</h1>
+  <div class="barra"></div>
+  <p>Painéis interativos que cruzam dados aduaneiros, sell out de varejo e marketplace, ERP e planilhas. Filtros, abas e gráficos funcionam.</p>
+  <div class="acoes">
+    <a class="b" id="bDesk" href="painel.html">Abrir no computador</a>
+    <a class="b sec" id="bMob" href="mobile.html">Abrir no celular</a>
+  </div>
+  <div class="nota">Demonstração com dados 100% fictícios: marcas, empresas e pessoas são inventadas.</div>
+</main>
+<script>
+  // leva direto para a versao certa; ?fica mantem esta pagina (para conferir)
+  (function () {
+    if (/[?&]fica\b/.test(location.search)) return;
+    var cel = window.innerWidth < 820 || /Android|iPhone|iPod|Mobile/i.test(navigator.userAgent);
+    location.replace(cel ? 'mobile.html' : 'painel.html');
+  })();
+</script>
+</body>
+</html>
